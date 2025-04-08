@@ -30,7 +30,7 @@
         <div data-loader="circle-side"></div>
     </div><!-- /Page Preload -->
 
-    <div class="jarallax jarallax_element" data-jarallax data-video-src="mp4:video/sunrise.mp4"></div>
+    <div class="jarallax jarallax_element" data-jarallax data-video-src="mp4:/video/sunrise.mp4"></div>
     
     <div class="min-vh-100 d-flex flex-column" id="main">
         
@@ -128,6 +128,12 @@
 	<script src="js/fslightbox.js"></script>
 	<script src="js/functions.js"></script>
 	<script src="phpmailer/validate.js"></script>
+    <script>$(document).ready(function() {
+        console.log("Initializing jarallax with video:", $(".jarallax").attr("data-video-src"));
+        jarallax(document.querySelectorAll('.jarallax'), {
+            speed: 0.2
+        });
+    });</script>
 
   </body>
 </html>

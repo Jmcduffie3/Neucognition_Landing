@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Neucognition - Site Launch Coming soon">
+    <meta name="author" content="Ahendrick">
+    <title>Neucognition - Site Launch Coming soon</title>
+   
+    <!-- Favicons-->
+
+    <!-- GOOGLE WEB FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cookie&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bs-icon-font/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/vendors.min.css" rel="stylesheet">
+
+    <!-- YOUR CUSTOM CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+    
+  </head>
+  <body class="datepicker_mobile_full">
+
+    <div id="preloader">
+        <div data-loader="circle-side"></div>
+    </div><!-- /Page Preload -->
+
+    <div class="jarallax jarallax_element" data-jarallax-video="mp4:./video/sunrise.mp4"></div>
+    
+    <div class="min-vh-100 d-flex flex-column" id="main">
+        
+        <!-- <div class="container">
+            <div id="logo"><img src="img/logo.png" alt="" width="750" height="100"></div>
+        </div> -->
+        <div class="container my-auto main_content">
+            <div class="row countdown">
+                <div class="col-md-12">
+                    <h1>Neucognition Centers</h1>
+                    <h2>Innovation under construction</h2>
+                </div>
+            </div>
+        </div>
+        <!-- End main_content -->
+        <div class="container-fluid p-0 mt-5">
+            <nav class="clearfix">
+                <ul class="menu">
+                    <li><a href="#" id="modal-offers-open">Ask us a question</a></li>
+                    <li><a href="#" id="modal-notified-open">Get notified</a></li>
+                    <li><a href="mailto:info@neucognition.com" id="modal-contacts-open">info@neucognition.com</a></li>
+                </ul>
+                <!-- <ul id="contact_follow">
+                    <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                    <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                    <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                </ul> -->
+            </nav>
+        </div>
+    </div>
+    <!-- End main -->
+
+    <div id="modal-offers">
+        <div class="min-vh-100 d-flex flex-column">
+            <a href="#" class="modal-close"><i class="bi bi-x"></i></a>
+            <div class="container my-auto">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center my-auto">
+                        <h2 class="section_title mb-4">Ask us anything!</h2>
+                        <form method="post" action="phpmailer/newsletter_phpmailer.php" id="newsletter" name="newsletter" autocomplete="off">
+                            <div class="form-group">
+                                <input name="name-ask" id="name-ask" type="text" placeholder="Your Name" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input name="email-ask" id="email-ask" type="email" placeholder="Your Email" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input name="tel-ask" id="tel-ask" type="tel" placeholder="Your Phone Number" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input name="message-ask" id="message-ask" type="text" placeholder="Your Message" class="form-control">
+                            </div>
+                            <button id="submit-ask" class="btn-2">Submit</button>
+                        </form>
+                        <div id="message-askus"></div>
+                    </div>
+                </div><!-- End row -->
+            </div><!-- End conainer -->
+        </div>
+    </div><!-- End modal -->
+
+    <!-- Modal Notified -->
+    <div id="modal-notified">
+        <div class="min-vh-100 d-flex flex-column">
+            <a href="#" class="modal-close"><i class="bi bi-x"></i></a>
+            <div class="container my-auto">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-center my-auto">
+                        <h2 class="section_title mb-4">Get Notified</h2>
+                        <p class="lead">
+                            Get an email when our site launches.
+                        </p>
+                        <form method="post" action="phpmailer/newsletter_phpmailer.php" id="newsletter-email" name="newsletter" autocomplete="off">
+                            <div class="form-group">
+                                <input name="email_newsletter" id="email_newsletter" type="email" placeholder="Your Email" class="form-control">
+                            </div>
+                            <button id="submit-newsletter" class="btn-2">Subscribe</button>
+                        </form>
+                        <div id="message-newsletter"></div>
+                    </div>
+                </div><!-- End row -->
+            </div><!-- End conainer -->
+        </div>
+    </div><!-- End modal -->
+
+    
+	<!-- COMMON SCRIPTS -->
+	<script src="js/jquery-3.7.1.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/jarallax.min.js"></script>
+    <script src="js/jarallax-video.min.js"></script>
+	<script src="js/moment.min.js"></script>
+	<script src="js/daterangepicker.js"></script>
+	<script src="js/owl-carousel.js"></script>
+	<script src="js/fslightbox.js"></script>
+	<script src="js/functions.js"></script>
+	<script src="phpmailer/validate.js"></script>
+
+  </body>
+</html>

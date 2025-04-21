@@ -40,7 +40,11 @@
         <div class="container my-auto main_content">
             <div class="row countdown">
                 <div class="col-md-12">
-                    <h1>Neucognition Centers</h1>
+                    <div class="logo-container">
+    <div class="logo-wrapper">
+        <img src="img/logo2.png" alt="Neucognition Centers Logo" class="logo-image">
+    </div>
+</div>
                     <h2>Innovation under construction</h2>
                 </div>
             </div>
@@ -51,7 +55,7 @@
                 <ul class="menu">
                     <li><a href="#" id="modal-offers-open">Ask us a question</a></li>
                     <li><a href="#" id="modal-notified-open">Get notified</a></li>
-                    <li><a href="mailto:info@neucognition.com" id="modal-contacts-open">info@neucognition.com</a></li>
+                    <li><a  id="modal-contacts-open">info@neucognition.com</a></li>
                 </ul>
                 <!-- <ul id="contact_follow">
                     <li><a href="#"><i class="bi bi-instagram"></i></a></li>
@@ -71,20 +75,29 @@
                     <div class="col-md-6 text-center my-auto">
                         <h2 class="section_title mb-4">Ask us anything!</h2>
                         <form method="post" action="phpmailer/newsletter_phpmailer.php" id="newsletter" name="newsletter" autocomplete="off">
-                            <div class="form-group">
-                                <input name="name-ask" id="name-ask" type="text" placeholder="Your Name" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <input name="email-ask" id="email-ask" type="email" placeholder="Your Email" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <input name="tel-ask" id="tel-ask" type="tel" placeholder="Your Phone Number" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <input name="message-ask" id="message-ask" type="text" placeholder="Your Message" class="form-control">
-                            </div>
-                            <button id="submit-ask" class="btn-2">Submit</button>
-                        </form>
+    <div class="form-group">
+        <label for="name-ask"></label><input name="name-ask" id="name-ask" type="text" placeholder="Your Name" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label for="email-ask"></label><input name="email-ask" id="email-ask" type="email" placeholder="Your Email" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <label for="tel-ask"></label><input name="tel-ask" id="tel-ask" type="tel" placeholder="Your Phone Number" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="message-ask"></label><textarea name="message-ask" id="message-ask" placeholder="Your Message" class="form-control" required></textarea>
+    </div>
+    <!-- Honeypot field - invisible to humans but bots will fill it -->
+    <div class="form-group" style="display:none;">
+        <label for="website"></label><input name="website" type="text" id="website" autocomplete="off">
+    </div>
+    <!-- Add CSRF token -->
+    <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+    <button id="submit-ask" class="btn-2">Submit</button>
+<div class="form-group">
+    <div class="g-recaptcha" data-sitekey="6LdO4x8rAAAAAMeHU9gBjkAFsynLeaDT4q_NVaf_"></div>
+</div>
+</form>
                         <div id="message-askus"></div>
                     </div>
                 </div><!-- End row -->
@@ -104,11 +117,15 @@
                             Get an email when our site launches.
                         </p>
                         <form method="post" action="phpmailer/newsletter_phpmailer.php" id="newsletter-email" name="newsletter" autocomplete="off">
-                            <div class="form-group">
-                                <input name="email_newsletter" id="email_newsletter" type="email" placeholder="Your Email" class="form-control">
-                            </div>
-                            <button id="submit-newsletter" class="btn-2">Subscribe</button>
-                        </form>
+    <div class="form-group">
+        <label for="email_newsletter"></label><input name="email_newsletter" id="email_newsletter" type="email" placeholder="Your Email" class="form-control" required>
+    </div>
+    <!-- Honeypot field - invisible to humans but bots will fill it -->
+    <div class="form-group" style="display:none;">
+        <label for="website2"></label><input name="website" type="text" id="website2" autocomplete="off">
+    </div>
+    <button id="submit-newsletter" class="btn-2">Subscribe</button>
+</form>
                         <div id="message-newsletter"></div>
                     </div>
                 </div><!-- End row -->
@@ -133,6 +150,7 @@
             speed: 0.2
         });
     });</script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
   </body>
 </html>
